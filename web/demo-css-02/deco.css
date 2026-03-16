@@ -1,0 +1,31 @@
+body {
+    background-color: navy;
+    color:palegreen;
+}
+img {
+    width: 250px;
+}
+#zone1 > p {
+    background-color:deeppink;  
+}
+#zone2 > p {
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    padding: 10px;
+}
+#zone3 > p {
+    margin: auto;
+    width: 80%;
+    min-width: 780px; /* 3 images + 2 padding + 2 gap */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    padding: 10px;
+}

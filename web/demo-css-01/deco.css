@@ -1,0 +1,30 @@
+body {
+    background-color: navy;
+    color:palegreen;
+}
+img {
+    width: 250px;
+}
+#zone1 > p {
+    background-color:deeppink;  
+}
+#zone2 > p {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row; /* Valeur par défaut */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#zone3 > p {
+    margin: auto;
+    width: 40%;
+    min-width: 270px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:purple; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Selon l'axe secondaire */
+    gap: 10px;
+}
