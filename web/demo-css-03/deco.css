@@ -1,0 +1,45 @@
+/* Style par défaut */
+body {
+    color: palegreen;
+}
+
+img {
+    width: 200px;
+}
+
+p {
+    width: 50%;
+    margin: 50px auto 0px auto;
+    background-color: yellow;
+    border: 2px palegreen solid;
+}
+
+/* Styles conditionnés */
+/* Breakpoints à 800px et à 1200px  */
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: navy;
+    }
+    p {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    body {
+        background-color: cadetblue;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: purple;
+    }
+    p {
+        text-align: right;
+    }
+}
