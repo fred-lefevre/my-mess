@@ -1,0 +1,12 @@
+img {
+    width: 200px;
+}
+#clapier {
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row; /* Valeur par défaut */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
