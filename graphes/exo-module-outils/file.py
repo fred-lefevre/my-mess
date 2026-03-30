@@ -1,18 +1,13 @@
-from typing import TypeVar, Generic
+class File():
+    def __init__(self):
+        # Initialise une liste d'éléments
+        self.elements = []
 
-# Tous les éléments de la file seront d'un même type T.
-T = TypeVar('T')
-
-class File(Generic[T]):
-    def __init__(self) -> None:
-        # Initialise une liste d'éléments de type T
-        self.elements: list[T] = []
-
-    def enfiler(self, e: T) -> None:
+    def enfiler(self, e):
         """Ajoute l'élément e à la fin de la file."""
         self.elements.append(e)
 
-    def defiler(self) -> T:
+    def defiler(self):
         """
         Retire et renvoie le premier élément (T).
         Lève une exception si la file vide.
@@ -21,17 +16,17 @@ class File(Generic[T]):
             raise Exception("Impossible de retirer un élément d'une file vide")
         return self.elements.pop(0)
 
-    def est_vide(self) -> bool:
+    def est_vide(self):
         """Retourne True lorsque la file est vide, False sinon."""
         return len(self.elements) == 0
 
-    def __str__(self) -> str:
+    def __str__(self):
         return f"File : {self.elements}"
 
 if __name__ == "__main__":
     # File d'attente pour un film
     # Les éléments sont des prénoms (str)
-    film = File[str]()
+    film = File()
     print(film)
     film.enfiler("Bobby")
     film.enfiler("Ada")

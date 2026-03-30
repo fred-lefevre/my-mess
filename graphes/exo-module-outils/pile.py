@@ -1,35 +1,28 @@
-from typing import TypeVar, Generic
-
-# Tous les éléments de la pile seront d'un même type T.
-T = TypeVar('T')
-
-class Pile(Generic[T]):
-    def __init__(self) -> None:
+class Pile():
+    def __init__(self):
         """Initialise une nouvelle pile vide."""
-        # On précise que c'est une liste d'éléments de type T
-        self.elements: List[T] = []
+        self.elements: List = []
 
-    def empiler(self, e: T) -> None:
+    def empiler(self, e):
         """Ajoute un élément au sommet de la pile."""
         self.elements.append(e)
 
-    def depiler(self) -> T:
+    def depiler(self):
         """Retire et renvoie l'élément au sommet de la pile."""
         if self.est_vide():
             raise Exception("Impossible de retirer un élément d'une pile vide")
         return self.elements.pop()
 
-    def est_vide(self) -> bool:
+    def est_vide(self):
         """Retourne True lorsque la pile est vide, False sinon."""
         return len(self.elements) == 0
 
-    def __str__(self) -> str:
+    def __str__(self):
         return f"Pile : {self.elements}"
 
 if __name__ == "__main__":
     # File d'attente pour un film
-    # Les éléments sont des nomrbes entiers
-    calcul = Pile[int]()
+    calcul = Pile()
     print(calcul)
     calcul.empiler(7)
     calcul.empiler(4)
