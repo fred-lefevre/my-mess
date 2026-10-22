@@ -1,6 +1,4 @@
 # exception-nombre.py
-#
-# Frederic Lefevre <fred.lefevre@gmail.com>
 
 try:
     # Code à exécuter
